@@ -621,8 +621,8 @@ menu .m -tearoff 0
             -accelerator "Control+O" -command {openFileDialog}
         .m.file add command -label "Save" -underline 0 \
             -accelerator "Control+S" -command {saveFile $myVars::filename}
-        .m.file add command -label "Save As..." -underline 5 \
-            -accelerator "Control+Shift+S" -command {saveFileDialog}
+        #.m.file add command -label "Save As..." -underline 5 \
+        #    -accelerator "Control+Shift+S" -command {saveFileDialog}
         .m.file add separator
         .m.file add checkbutton -label "Recent Files..." -underline 0 \
             -accelerator "F6" -state "disabled" \
@@ -941,7 +941,7 @@ unset bindings key
 
 bind . <Control-o>          {.m.file    invoke "Open..."}
 bind . <Control-s>          {.m.file    invoke "Save"}
-bind . <Control-Shift-S>    {.m.file    invoke "Save As..."}
+#bind . <Control-Shift-S>    {.m.file    invoke "Save As..."}
 bind . <F6>                 {.m.file    invoke "Recent Files..."}
 bind . <Control-q>          {.m.file    invoke "Exit"}
 bind . <Control-Shift-Q>    {exit}
